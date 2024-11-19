@@ -23,7 +23,7 @@ resource "aws_subnet" "subnet_2"{
     cidr_block = var.this_cidr_block_sub2           #"192.168.128.0/17"
     availability_zone = var.this_az_sub2            #"ap-south-1b"
     tags = {
-        Name = this_rds_subnet_tag                  #"Subnet2_RDS"
+        Name = var.this_rds_subnet_tag                  #"Subnet2_RDS"
     }
 }
 
