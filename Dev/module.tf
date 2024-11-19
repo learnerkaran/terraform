@@ -85,6 +85,8 @@ output "ec2_public_dns" {
 
 output "ec2_private_dns" {
     value = module.ec2.ec2_private_dns
+}
 
 output "ec2_arn" {
     value = module.ec2.ec2_arn
+}
