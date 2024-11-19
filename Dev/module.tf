@@ -1,5 +1,5 @@
 module "ec2" {
-    source = "/root/terraform/resources/ec2/"
+    source = "/root/terraform/Dev/ec2/"
     this_ec2_ami = "ami-0dee22c13ea7a9a67"
     this_ec2_instance = "t2.micro"
     this_subnet_id = module.vpc.ec2_subnet_id
@@ -9,7 +9,7 @@ module "ec2" {
 }
 
 module "vpc" {
-    source = "/root/terraform/resources/vpc/"
+    source = "/root/terraform/Resources/vpc/"
     this_vpc_cidr = "192.168.0.0/16"
     this_instance_tenancy = "default"
     this_dns_support = true
