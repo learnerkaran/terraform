@@ -22,7 +22,7 @@ variable "this_cidr_block_sub1" {
     
 }
 
-variable "this_az_sub2" {
+variable "this_az_sub1" {
     
 }
 

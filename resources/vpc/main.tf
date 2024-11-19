@@ -1,6 +1,6 @@
 resource "aws_vpc" "my_vpc" {
     cidr_block = var.this_vpc_cidr                  #"192.168.0.0/16"
-    instance_tenancy = var.this_instance_tenancy    "default"
+    instance_tenancy = var.this_instance_tenancy    #"default"
     enable_dns_support = var.this_dns_support            #true
     enable_dns_hostnames = var.this_dns_hostnames        #true
 
