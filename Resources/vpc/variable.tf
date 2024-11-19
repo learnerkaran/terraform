@@ -93,31 +93,3 @@ variable "this_from_to_port_sg_ingress_mysql"{
 variable "description_sg_ingress_mysql"{
     
 }
-
-variable "" {
-    
-}
-
-variable "" {
-    
-}
-
-variable "" {
-    
-}
-
-variable "" {
-    
-}
-
-variable "" {
-    
-}
-
-variable "" {
-    
-}
-
-variable "" {
-    
-}
