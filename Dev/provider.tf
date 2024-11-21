@@ -1,6 +1,7 @@
 provider "aws" {
   region = "ap-south-1"
   profile = "config"
+  shared_credentials_files = ["/root/.aws/credentials"]
     default_tags {
                 tags = {
                     name = "3tier"
@@ -15,6 +16,6 @@ terraform {
     dynamodb_table = "backend-db-backend-block"
     region = "ap-south-1"
         profile = "config"
-        shared_credentials_files = ["/home/anup/.aws/credentials"]
+        shared_credentials_files = ["/root/.aws/credentials"]
   }
 }
