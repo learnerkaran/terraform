@@ -49,7 +49,7 @@ module "rds" {
     this_rds_sg_id = [module.vpc.security_group_id]
     this_vpc_db_subnet_name = module.rds.db_subnet_group_name
     this_db_subnet_name = "karan-rds-subnet-group-name" 
-    this_subnet_id_for_db = [module.vpc.rds_subnet_id]
+    this_subnet_id_for_db = [module.vpc.rds_subnet_id, module.vpc.ec2_subnet_id]
     this_karan_rds_subnet_name = "karan-rds-subnet-group"
 }
 
