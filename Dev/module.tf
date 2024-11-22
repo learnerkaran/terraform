@@ -48,7 +48,7 @@ module "rds" {
     this_port_number = 3306
     this_rds_sg_id = [module.vpc.security_group_id]
     #this_vpc_db_subnet_name = aws_db_subnet_group.subnet-group-for-rds.name
-    this_db_subnet_name = "karan-rds-subnet-group"
+    this_db_subnet_name = "karan-rds-subnet-group_name"
     this_subnet_id_for_db = [module.vpc.rds_subnet_id]
     this_karan_rds_subnet_name = "karan-rds-subnet-group"
 }
