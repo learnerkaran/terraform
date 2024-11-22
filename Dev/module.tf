@@ -19,6 +19,7 @@ module "vpc" {
     this_az_sub1 = "ap-south-1a"
     this_ec2_subnet_tag = "Subnet1_Instance"
     this_cidr_block_sub2 = "192.168.128.0/17"
+    this_publicip_give = true
     this_az_sub2 = "ap-south-1b"
     this_rds_subnet_tag = "Subnet2_RDS"
     this_vpc_security_tag = "Karan_Security_Group"

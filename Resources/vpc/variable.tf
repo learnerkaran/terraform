@@ -93,3 +93,7 @@ variable "this_from_to_port_sg_ingress_mysql"{
 variable "description_sg_ingress_mysql"{
     
 }
+
+variable "this_publicip_give" {
+    
+}

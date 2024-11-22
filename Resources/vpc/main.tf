@@ -13,6 +13,7 @@ resource "aws_subnet" "subnet_1" {
     vpc_id = aws_vpc.my_vpc.id
     cidr_block = var.this_cidr_block_sub1           #"192.168.0.0/17"
     availability_zone = var.this_az_sub1            #"ap-south-1a"
+    map_public_ip_on_launch = var.this_publicip_give
     tags = {
         Name = var.this_ec2_subnet_tag                    #"Subnet1_Instance"
     }
