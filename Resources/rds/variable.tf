@@ -42,7 +42,7 @@ variable "this_vpc_db_subnet_name" {
     
 }
 
-variable "this_rds_gs_id" {
+variable "this_rds_sg_id" {
     
 }
 
