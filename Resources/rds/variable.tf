@@ -38,9 +38,9 @@ variable "this_port_number" {
     
 }
 
-#variable "this_vpc_db_subnet_name" {
+variable "this_vpc_db_subnet_name" {
     
-#}
+}
 
 variable "this_rds_sg_id" {
     

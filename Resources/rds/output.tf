@@ -65,3 +65,7 @@ output "db_storage_encrypted" {
 output "db_username" {
     value = aws_db_instance.mysql_karan.username
 }
+
+output "db_subnet_group_name" {
+    value = aws_db_subnet_group.subnet-group-for-rds.id
+}

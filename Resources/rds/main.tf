@@ -10,12 +10,12 @@ resource "aws_db_instance" "mysql_karan" {
     password                    = var.this_db_passwd            #"Admin1234"
     skip_final_snapshot         = var.this_final_snapshot       #true
     port                        = var.this_port_number          #3306
-    #db_subnet_group_name        = var.this_vpc_db_subnet_name   #aws_db_subnet_group.subnet-group-for-rds.name
+    db_subnet_group_name        = var.this_vpc_db_subnet_name   #aws_db_subnet_group.subnet-group-for-rds.name
     vpc_security_group_ids      = var.this_rds_sg_id            #[aws_security_group.karan_security_group.id]
 }
 
 resource "aws_db_subnet_group" "subnet-group-for-rds"{
-    name = var.this_db_subnet_name                              #"karan-rds-subnet-group"
+    name = var.this_db_subnet_name                              #"karan-rds-subnet-group-name"
     subnet_ids = var.this_subnet_id_for_db                      #[aws_subnet.subnet_2.id]
 
     tags = {
