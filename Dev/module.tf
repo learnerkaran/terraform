@@ -3,7 +3,7 @@ module "ec2" {
     this_ec2_ami = "ami-0dee22c13ea7a9a67"
     this_ec2_instance = "t2.micro"
     this_subnet_id = module.vpc.ec2_subnet_id
-    associate_public_ip_address = true
+    this_associate_public_ip_address = true
     this_vpc_security = [module.vpc.security_group_id]
     ec2_key_name = "karannew-acc-mum-kp"
     this_tag = "TomcatServer"
