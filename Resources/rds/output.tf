@@ -65,11 +65,3 @@ output "db_storage_encrypted" {
 output "db_username" {
     value = aws_db_instance.mysql_karan.username
 }
-
-output "db_" {
-    value = aws_db_instance.mysql_karan. 
-}
-
-output "db_" {
-    value = aws_db_instance.mysql_karan. 
-}
