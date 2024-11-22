@@ -3,6 +3,7 @@ module "ec2" {
     this_ec2_ami = "ami-0dee22c13ea7a9a67"
     this_ec2_instance = "t2.micro"
     this_subnet_id = module.vpc.ec2_subnet_id
+    associate_public_ip_address = true
     this_vpc_security = [module.vpc.security_group_id]
     ec2_key_name = "karannew-acc-mum-kp"
     this_tag = "TomcatServer"
@@ -31,6 +32,23 @@ module "vpc" {
     description_sg_ingress_tomcat = "for tomcat"
     this_from_to_port_sg_ingress_mysql = "3306"
     description_sg_ingress_mysql = "for database"
+}
+
+module "rds" {
+    source = "/root/terraform/Resources/rds/"
+    this_db_name = "karan-db"
+    this_db_size = 20
+    this_storage_type = "gp2"
+    this_engine_type = "mysql"
+    this_engine_version = "8.0.39"
+    this_db_instace_class = "db.t3.micro"
+    ths_db_username = "admin"
+    this_db_passwd = "Admin1234"
+    this_final_snapshot = true
+    this_port_number = 3306
+    this_vpc_db_subnet_name = aws_db_subnet_group.subnet-group-for-rds.name
+    this_db_subnet_name = "karan-rds-subnet-group"
+    this_subnet_id_for_db = [module.vpc.rds_subnet_id]
 }
 
 output "vpc_arn_i" {

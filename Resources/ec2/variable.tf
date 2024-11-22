@@ -20,3 +20,7 @@ variable "ec2_key_name" {
 variable "this_tag" {
     
 }
+
+variable "this_associate_public_ip_address" {
+    
+}

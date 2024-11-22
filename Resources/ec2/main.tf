@@ -1,7 +1,7 @@
 resource "aws_instance" "my_tomcat_server" {
     ami = var.this_ec2_ami #ami-0dee22c13ea7a9a67
     instance_type = var.this_ec2_instance
-
+    associate_public_ip_address = var.this_associate_public_ip_address
     subnet_id = var.this_subnet_id
     security_groups = var.this_vpc_security     #[aws_security_group.myec2_sg.name]
     key_name = var.ec2_key_name                 #"karannew-acc-mum-kp"
