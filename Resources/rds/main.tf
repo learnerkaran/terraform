@@ -3,8 +3,8 @@ resource "aws_db_instance" "mysql_karan" {
     allocated_storage           = var.this_db_size              #20
     storage_type                = var.this_storage_type         #"gp2"  
     #availability_zone           = "ap-south-1b"
-    engine                      = var.this_ingine_type          #"mysql"
-    engine_version              = var.this_engive_version       #"8.0.39"
+    engine                      = var.this_engine_type          #"mysql"
+    engine_version              = var.this_engine_version       #"8.0.39"
     instance_class              = var.this_db_instace_class     #"db.t3.micro"
     username                    = var.ths_db_username           #"admin"
     password                    = var.this_db_passwd            #"Admin1234"
