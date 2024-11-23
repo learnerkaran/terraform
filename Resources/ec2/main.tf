@@ -35,7 +35,7 @@ resource "aws_lb" "my_alb" {
 }
 
 resource "aws_lb_target_group" "my_target_group" {
-  name        = var.this_Lb_tag_name                      #"my-target-group"
+  name        = var.aws_lb_target_group_name                      #"my-target-group"
   port        = var.this_tg_port                          #80
   protocol    = var.this_tg_protocol                      #"HTTP"
   vpc_id      = var.this_tg_vpc_id                        #var.vpc_id
@@ -102,25 +102,25 @@ resource "aws_launch_template" "my_launch_template" {
   #            apt install -y apache2
   #            systemctl start apache2
   #            EOF
-  )
+  #)
 }
 
 resource "aws_autoscaling_group" "my_asg" {
   desired_capacity     = var.this_asg_capacity            #2
   max_size             = var.this_asg_max_size            #5
   min_size             = var.this_ags_min_size            #1
-  vpc_zone_identifier  = var_this_asg_zone_identifier     #var.private_subnets
+  vpc_zone_identifier  = var.this_asg_zone_identifier     #var.private_subnets
   launch_template {
     id      = var.this_launch_temp_id                     #aws_launch_template.my_launch_template.id
     version = var.this_launch_template_version            #"$Latest"
   }
-  target_group_arns = [aws_lb_target_group.my_target_group.arn]
+  target_group_arns = var.this_aws_autoscaling_group_target_group_arns      #[aws_lb_target_group.my_target_group.arn]
 
   tags = [
     {
-      key                 = "Name"
-      value               = "ASG-Instance"
-      propagate_at_launch = true
+      key                 = var.this_aws_autoscaling_group_key        #"Name"
+      value               = var.this_aws_autoscaling_group_value      #"ASG-Instance"
+      propagate_at_launch = var.this_aws_autoscaling_group_propagate_at_launch        #true
     }
   ]
 }
