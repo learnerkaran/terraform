@@ -61,3 +61,12 @@ resource "aws_vpc_security_group_ingress_rule" "ingress_rule_mysql" {
     ip_protocol = var.this_protocol_sg_ingress                                  #"tcp"
     description = var.description_sg_ingress_mysql                              #"for database"
 }
+
+resource "aws_vpc_security_group_ingress_rule" "ingress_rule_https" {
+    security_group_id = aws_security_group.karan_security_group.id
+    cidr_ipv4 = var.this_cidr_sg_egress_ingress                                 #"0.0.0.0/0"
+    from_port = var.this_from_to_port_sg_ingress_https                          #443
+    to_port = var.this_from_to_port_sg_ingress_https                            #443
+    ip_protocol = var.this_protocol_sg_ingress                                  #"tcp"
+    description = var.description_sg_ingress_https                              #"for database"
+}

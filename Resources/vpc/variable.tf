@@ -97,3 +97,9 @@ variable "description_sg_ingress_mysql"{
 variable "this_publicip_give" {
     
 }
+variable "this_from_to_port_sg_ingress_https" {
+    
+}
+variable "description_sg_ingress_https" {
+    
+}

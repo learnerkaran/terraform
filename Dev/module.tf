@@ -30,8 +30,10 @@ module "vpc" {
     this_from_to_port_sg_ingress_tomcat = 8080
     this_protocol_sg_ingress = "tcp"
     description_sg_ingress_tomcat = "for tomcat"
-    this_from_to_port_sg_ingress_mysql = "3306"
+    this_from_to_port_sg_ingress_mysql = 3306
     description_sg_ingress_mysql = "for database"
+    this_from_to_port_sg_ingress_https = 443
+    description_sg_ingress_https = "for ALB https"
 }
 
 module "rds" {
