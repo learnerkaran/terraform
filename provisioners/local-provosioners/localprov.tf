@@ -20,8 +20,5 @@ provisioner "local-exec" {
     provisioner "local-exec" {
     working_dir = "/tmp/"
     command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
-  }
-}
-
-
+  }a
 }
