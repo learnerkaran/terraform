@@ -15,10 +15,10 @@ resource "aws_instance" "this_aws_instance" {
     instance_type = "t2.micro"
      
 provisioner "local-exec" {
-    command = "echo ${self.private_ip} >> /tmp/private_ips.txt "
+    command = "echo ${self.private_ip} >> /tmp/private_ips.txt"
   }
     provisioner "local-exec" {
     working_dir = "/tmp/"
-    command = "echo ${self.private_ip} >> workingdir_private_ips.txt "
-  }a
+    command = "echo ${self.private_ip} >> workingdir_private_ips.txt"
+  }
 }
