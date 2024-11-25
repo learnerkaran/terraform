@@ -6,7 +6,7 @@ resource "aws_instance" "this_aws_instance" {
     instance_type = "t2.micro"
      
     provisioner "file" {
-    source      = "readme.md"
+    source      = "abc.txt"
     destination = "/home/ubuntu/readme.md"
       connection {
     type     = "ssh"
